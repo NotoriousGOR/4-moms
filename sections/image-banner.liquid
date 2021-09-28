@@ -29,9 +29,9 @@
   }
 {%- endstyle -%}
 
-<div id="Banner-{{ section.id }}" class="banner flex-auto p-15" style="background-color: #E9E9E9;">
+<div id="Banner-{{ section.id }}" class="banner flex-auto p-15 justify-evenly" style="background-color: #E9E9E9;">
   {%- if section.settings.image != blank -%}
-    <div class="flex justify-self-center banner__media-half self-center ml-24">
+    <div class="flex banner__media-half self-center">
       <img
         src="{{ section.settings.image | img_url: '1500x' }}"
         loading="lazy"
@@ -42,7 +42,7 @@
       >
     </div>
   {%- endif -%}
-  <div class="flex justify-self-center self-center">
+  <div class="flex self-center">
     <div class="banner__box bg-transparent">
       {%- for block in section.blocks -%}
         {%- case block.type -%}

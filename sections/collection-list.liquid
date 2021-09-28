@@ -6,7 +6,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
   <slider-component class="slider-mobile-gutter pl-14 pr-14">
-    <ul class="collection-list grid grid-cols-1 md:grid-cols-2 {% if section.blocks.size < 5 %} grid--{{ section.blocks.size }}-col-tablet{% else %} grid--3-col-tablet{% endif %}{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} negative-margin--small{% endif %}"
+    <ul class="collection-list grid grid-cols-1 md:grid-cols-2 gap-4 {% if section.blocks.size < 5 %} grid--{{ section.blocks.size }}-col-tablet{% else %} grid--3-col-tablet{% endif %}{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} negative-margin--small{% endif %}"
       id="Slider-{{ section.id }}"
       role="list"
     >
@@ -21,7 +21,7 @@
       {%- for block in section.blocks -%}
         <li class="collection-list__item" {{ block.shopify_attributes }}>
           <a{% if block.settings.collection != blank and block.settings.collection.all_products_count > 0 %} href="{{ block.settings.collection.url }}"{% endif %}
-            class="card animate-arrow link{% if block.settings.collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
+            class="card animate-arrow link {% if block.settings.collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %}{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
           >
             <div class="card--stretch card-colored color-{{ section.settings.color_scheme }}">
               {%- if block.settings.collection.featured_image != blank -%}
