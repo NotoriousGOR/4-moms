@@ -1,0 +1,22 @@
+{
+  "name": "4-moms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotoriousGOR/4-moms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NotoriousGOR/4-moms/issues"
+  },
+  "homepage": "https://github.com/NotoriousGOR/4-moms#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.9"
+  }
+}
