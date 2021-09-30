@@ -19,7 +19,7 @@
       -%}
 
       {%- for block in section.blocks -%}
-        <li class="collection-list__item" {{ block.shopify_attributes }}>
+        <li class="collection-list__item md:max-h-60" {{ block.shopify_attributes }}>
           <a{% if block.settings.collection != blank and block.settings.collection.all_products_count > 0 %} href="{{ block.settings.collection.url }}"{% endif %}
             class="card animate-arrow link {% if block.settings.collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %}{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
           >
